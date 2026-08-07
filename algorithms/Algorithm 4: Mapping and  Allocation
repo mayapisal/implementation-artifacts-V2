@@ -1,0 +1,76 @@
+## Algorithm 4: Mapping and  Allocation
+
+**Input:**
+Owner `o`, Demand Matrix, Supplier Matrix, Maximum number of demands `m`
+
+**Output:**
+Allocation Matrix updated successfully, or transaction reverted with an appropriate error.
+
+### Pseudocode
+
+```text id="k6p3rx"
+Algorithm 5: Demand–Supply Allocation
+
+1.  if msg.sender != o then
+2.      Reject transaction
+3.      Error: "Not owner"
+
+4.  Initialize Allocation Matrix ID
+
+5.  Record current timestamp
+
+6.  Load Demand Matrix
+    Limit processing to maximum m demands
+
+7.  Load Supplier Matrix
+
+8.  For each demand in Demand Matrix:
+
+9.      if demand status is NF OR PF then
+
+10.         For each required resource:
+
+11.             Identify eligible suppliers
+
+12.             For each eligible supplier:
+
+13.                 Calculate allocation quantity:
+                    allocationQty =
+                    min(demandQty, supplyQty)
+
+14.                 Create allocation record:
+                    <AllocationID, DemandID,
+                     SupplierID, Resource,
+                     AllocationQty, Timestamp>
+
+15.                 Update Allocation Matrix
+
+16.                 Reduce demand quantity by allocationQty
+
+17.                 Reduce supplier quantity by allocationQty
+
+18.                 if remaining demand quantity == 0 then
+19.                     Set demand status = F
+20.                 else
+21.                     Set demand status = PF
+
+22.                 if remaining supplier quantity == 0 then
+23.                     Set supplier flag = A
+24.                 else
+25.                     Set supplier flag = PA
+
+26.             end for
+
+27.         end for
+
+28.     end if
+
+29. Persist updated Demand Matrix
+
+30. Persist updated Supplier Matrix
+
+31. Store Allocation Matrix
+
+32. Return Allocation Matrix ID
+```
+
