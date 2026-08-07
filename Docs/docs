@@ -1,12 +1,25 @@
-##  Experimental Setup for Smart Contract Load Testing
+## Experimental Setup for Smart Contract Load Testing
 
-| Section      | Category            | Minimum Requirements                         |
-| ------------ | ------------------- | -------------------------------------------- |
-| **Hardware** | Processor           | Dual-core CPU (AMD Ryzen 7)                  |
-| | Memory (RAM)        | 16 GB                                        |
-|  | Storage             | HDD or SSD with sufficient space             |
-| **Software** | Operating System    | 64-bit Windows 11                            |
-|  | Runtime Environment | Node.js v16 or later                         |
-|  | Package Manager     | npm (latest stable version)                  |
-|  | Blockchain Network  | Hardhat Network (local Ethereum environment) |
-|  | Testing Libraries   | Mocha and Chai                               |
+| **Section**  | **Category**        | **Configuration / Requirement**                          |
+| ------------ | ------------------- | -------------------------------------------------------- |
+| **Hardware** | Processor           | Dual-core AMD Ryzen 7 processor                          |
+|              | Memory (RAM)        | 16 GB                                                    |
+|              | Storage             | HDD or SSD with sufficient available storage             |
+| **Software** | Operating System    | 64-bit Windows 11                                        |
+|              | Runtime Environment | Node.js v16 or later                                     |
+|              | Package Manager     | npm (latest stable version)                              |
+|              | Blockchain Network  | Hardhat Network (local Ethereum development environment) |
+|              | Testing Libraries   | Mocha and Chai                                           |
+
+
+### Experimental Setup for Pilot Deployment
+
+| **Section**  | **Category**           | **Configuration**                    |
+| ------------ | ---------------------- | ------------------------------------ |
+| **Hardware** | Processor              | Dual-core AMD Ryzen 7 CPU            |
+|              | Memory (RAM)           | 16 GB                                |
+|              | Network Connectivity   | Stable broadband Internet connection |
+| **Software** | Frontend Interface     | Web-based HTML interface             |
+|              | Blockchain Interaction | Web3.js                              |
+|              | Wallet Integration     | MetaMask                             |
+|              | Blockchain Network     | Ethereum Sepolia Testnet             |
