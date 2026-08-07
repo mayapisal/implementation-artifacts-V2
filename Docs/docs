@@ -1,43 +1,12 @@
-### Experimental Setup for Smart Contract Load Testing
+##  Experimental Setup for Smart Contract Load Testing
 
-<table>
-  <tr>
-    <th>Section</th>
-    <th>Category</th>
-    <th>Minimum Requirements</th>
-  </tr>
-  <tr>
-    <td rowspan="3"><strong>Hardware</strong></td>
-    <td>Processor</td>
-    <td>Dual-core CPU (AMD Ryzen 7)</td>
-  </tr>
-  <tr>
-    <td>Memory (RAM)</td>
-    <td>16 GB</td>
-  </tr>
-  <tr>
-    <td>Storage</td>
-    <td>HDD or SSD with sufficient space</td>
-  </tr>
-  <tr>
-    <td rowspan="5"><strong>Software</strong></td>
-    <td>Operating System</td>
-    <td>64-bit Windows 11</td>
-  </tr>
-  <tr>
-    <td>Runtime Environment</td>
-    <td>Node.js v16 or later</td>
-  </tr>
-  <tr>
-    <td>Package Manager</td>
-    <td>npm (latest stable version)</td>
-  </tr>
-  <tr>
-    <td>Blockchain Network</td>
-    <td>Hardhat Network (local Ethereum environment)</td>
-  </tr>
-  <tr>
-    <td>Testing Libraries</td>
-    <td>Mocha and Chai</td>
-  </tr>
-</table>
+| Section      | Category            | Minimum Requirements                         |
+| ------------ | ------------------- | -------------------------------------------- |
+| **Hardware** | Processor           | Dual-core CPU (AMD Ryzen 7)                  |
+| | Memory (RAM)        | 16 GB                                        |
+|  | Storage             | HDD or SSD with sufficient space             |
+| **Software** | Operating System    | 64-bit Windows 11                            |
+|  | Runtime Environment | Node.js v16 or later                         |
+|  | Package Manager     | npm (latest stable version)                  |
+|  | Blockchain Network  | Hardhat Network (local Ethereum environment) |
+|  | Testing Libraries   | Mocha and Chai                               |
