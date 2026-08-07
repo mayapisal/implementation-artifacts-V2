@@ -1,0 +1,73 @@
+Algorithm 5: Cross-Phase Utility
+
+Input:
+Demand Provider Contract D, Resource Provider Contract R
+
+Output:
+Aggregated demand–supply values, resource shortage report, or compliance report.
+
+Pseudocode
+Algorithm 6: Cross-Phase Demand–Supply Analysis
+
+1.  Initialize CrossPhaseUtilities with:
+        Demand Provider Contract D
+        Resource Provider Contract R
+
+2.  Validate contract addresses
+
+3.  if D or R is invalid then
+4.      Reject transaction
+5.      Error: "Invalid contract address"
+
+
+6.  Retrieve aggregate demand data:
+
+7.  <resourceTypes, demandQuantities>
+        ← D.viewAggregateDemands()
+
+
+8.  Retrieve aggregate supply data:
+
+9.  <resourceTypes, supplyQuantities>
+        ← R.viewAggregateSupplies()
+
+
+10. if demand resource array length
+        != supply resource array length then
+
+11.     Reject transaction
+12.     Error: "Mismatch in resource arrays"
+
+
+13. Return combined demand–supply data
+
+
+14. Initialize shortage report
+
+15. For each resource r:
+
+16.     if demandQuantities[r] > supplyQuantities[r] then
+
+17.         shortage =
+            demandQuantities[r] - supplyQuantities[r]
+
+18.         Append shortage details to shortage report
+
+19.     else
+20.         Continue to next resource
+
+
+21. if no shortages are detected then
+
+22.     Return:
+        "All resources sufficiently supplied"
+
+
+23. Retrieve compliance report from Resource Provider
+    using Chk_Compliance()
+
+
+24. Return:
+        Combined Demand–Supply Data
+        Shortage Report
+        Compliance Report
