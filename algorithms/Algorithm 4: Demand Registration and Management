@@ -1,0 +1,49 @@
+Algorithm 4: Demand Registration and Management
+
+Input:
+Owner o, Provider DID d, Resources R, Quantities q, Criticality c
+
+Output:
+Demand stored/updated successfully, or transaction reverted with an appropriate error.
+
+Pseudocode
+Algorithm 4: Demand Registration and Management
+
+1.  if msg.sender == o then
+
+2.      Register provider using DID d
+
+3.  else
+4.      Reject transaction
+5.      Error: "Only owner"
+
+
+6.  if DID d exists then
+
+7.      Generate Demand Number D
+
+8.      For each resource Ri:
+
+9.          Create demand record:
+            <D, Ri, qi, ci, NF>
+
+10. else
+11.     Reject transaction
+12.     Error: "DID not registered"
+
+
+13. if Demand is updated then
+
+14.     Update resource quantity qi
+
+15.     Update demand timestamp
+
+16.     if qi > 0 then
+17.         Set demand status = PF
+18.     else
+19.         Set demand status = F
+
+20. Return demand matrix:
+        (NF, PF)
+
+21. OR return aggregated demand by resource
