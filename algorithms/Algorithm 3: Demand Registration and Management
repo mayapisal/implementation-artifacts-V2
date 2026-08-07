@@ -1,4 +1,4 @@
-Algorithm 4: Demand Registration and Management
+Algorithm 3: Demand Registration and Management
 
 Input:
 Owner o, Provider DID d, Resources R, Quantities q, Criticality c
