@@ -1,0 +1,18 @@
+## Smart Contract Test Cases
+
+| TC ID      | Test Scenario                                        | Expected Result                                                                                       | Priority     |
+| ---------- | ---------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ------------ |
+| **SC-001** | Unregistered user calls supplier/demand provider     | Transaction should be rejected if registration is required; no unauthorized state change should occur | **High**     |
+| **SC-002** | Register a new supplier                              | Supplier is registered successfully and `SupplierRegistered` event is emitted                         | **High**     |
+| **SC-003** | Register a new demand provider                       | Demand provider is registered successfully and the corresponding event is emitted                     | **High**     |
+| **SC-004** | Register an already registered supplier              | Transaction should revert; duplicate supplier should not be created                                   | **High**     |
+| **SC-005** | Unauthorized user performs restricted operation      | Transaction should revert and contract state should remain unchanged                                  | **Critical** |
+| **SC-006** | Successful payment                                   | Correct amount is transferred and payment-related event is emitted                                    | **Critical** |
+| **SC-007** | Payment with insufficient balance/funds              | Transaction should revert and no funds should be transferred                                          | **Critical** |
+| **SC-008** | Contract completion by unauthorized user             | Transaction should revert; contract remains active                                                    | **Critical** |
+| **SC-009** | Supplier registration with zero address              | Transaction should revert                                                                             | **High**     |
+| **SC-010** | Demand provider registration with zero address       | Transaction should revert                                                                             | **High**     |
+| **SC-011** | Contract operation with invalid user ID              | Transaction should revert; no state change should occur                                               | **High**     |
+| **SC-012** | Contract operation with invalid supplier/provider ID | Transaction should revert; no state change should occur                                               | **High**     |
+| **SC-013** | Access-control verification                          | Only authorized roles can execute restricted functions                                                | **Critical** |
+| **SC-014** | Reentrancy attack attempt on payment/function        | Reentrant call should be prevented and the transaction should revert                                  | **Critical** |
