@@ -8,7 +8,7 @@ This repository contains the implementation artifacts supporting the study:
 .
 ├── scripts/               # Deployment scripts
 ├── test/                  # Smart contract test cases
-├── pseudocode/            # Framework algorithms
+├── pseudocode/            # Framework algorithms and Pseudocode
 ├── docs/                  # Supporting documentation
 ├── Figures/               # Diagrams and screenshots
 ├── LICENSE
