@@ -1,0 +1,8 @@
+# Compile contracts
+npx hardhat compile
+
+# Deploy contracts
+npx hardhat run scripts/deploy.js --network localhost
+
+# Verify deployed contracts
+npx hardhat run scripts/verifyContracts.js --network localhost
