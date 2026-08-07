@@ -6,12 +6,10 @@ This repository contains the implementation artifacts supporting the study:
 
 ```
 .
-├── contracts/             # Solidity smart contracts
 ├── scripts/               # Deployment scripts
 ├── test/                  # Smart contract test cases
-├── pseudocode/            # Framework pseudocode and algorithms
+├── pseudocode/            # Framework algorithms
 ├── docs/                  # Supporting documentation
-├── figures/               # Architecture diagrams (optional)
 ├── Figures/               # Diagrams and screenshots
 ├── LICENSE
 └── README.md
@@ -19,13 +17,10 @@ This repository contains the implementation artifacts supporting the study:
 
 ## Included Artifacts
 
-- Smart contract source code
 - Deployment scripts
 - Test scripts
 - Framework pseudocode
 - Supporting implementation documentation
-
-
 
 ## Repository Status
 
