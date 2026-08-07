@@ -1,0 +1,55 @@
+Algorithm 2: Resource Management
+
+Input:
+Owner o, Admin a, Supplier wallet w, Provider ID i, Resource type R, Quantity q, Flag fl, Timestamp t
+
+Output:
+Resource updated, compliance status returned, or transaction reverted with an appropriate error.
+
+Pseudocode
+Algorithm 2: Resource Management
+
+1.  if msg.sender == a OR
+        msg.sender == o OR
+        msg.sender == allowedContract then
+
+2.      Open or close resource form
+
+3.  else
+4.      Reject transaction
+5.      Error: "Unauthorized"
+
+
+6.  if Supplier is registered AND
+        Resource form is open then
+
+7.      Fetch Provider ID i
+
+8.      Validate resource type R and quantity q
+
+9.      if Resource type R or quantity q is invalid then
+10.         Reject transaction
+11.         Error: "Invalid resource or quantity"
+
+12.     Store or update resource information:
+        <R, q, t, fl>
+
+13.     Emit ResourceQuantityUpdated event
+
+14. else
+15.     Reject transaction
+16.     Error: "Invalid state"
+
+
+17. if Compliance check is requested then
+
+18.     Fetch the timestamp of the last resource update
+
+19.     Calculate:
+        Current timestamp - Last update timestamp
+
+20.     if Last update <= 7 days then
+21.         Return COMPLIANT
+
+22.     else
+23.         Return NON-COMPLIANT
