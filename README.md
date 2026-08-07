@@ -6,11 +6,11 @@ This repository contains the implementation artifacts supporting the study:
 
 ```
 .
-├── scripts/               # Deployment scripts
-├── test/                  # Smart contract test cases
-├── pseudocode/            # Framework algorithms and Pseudocode
-├── docs/                  # Supporting documentation
-├── Figures/               # Diagrams and screenshots
+├── Scripts/               # Deployment and execution scripts
+├── Test Case/             # Smart contract test cases
+├── algorithms/            # Framework algorithms and pseudocode
+├── Docs/                  # Supporting documentation
+├── Figure/                # Diagrams and screenshots
 ├── LICENSE
 └── README.md
 ```
