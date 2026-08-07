@@ -1,0 +1,46 @@
+Algorithm 1: Resource Provider Registration
+
+Input:
+Owner o, Admin a, Provider wallet w, Name n, Location l, Resource types R, Registration fee f = 100000 wei, Contract c
+
+Output:
+Smart contract state updated successfully, or transaction reverted with an appropriate error.
+
+Pseudocode
+Algorithm 1: Resource Provider Registration
+
+1.  if msg.sender == o then
+2.      Open/Close registration phase
+3.      Emit RegistrationPhaseUpdated event
+4.  else
+5.      Reject transaction
+6.      Error: "Only owner"
+
+7.  if Registration is open AND
+        valid sender AND
+        msg.value == f then
+
+8.      if w is not registered then
+
+9.          Create Provider ID i
+
+10.         Store provider information:
+            <i, n, w, l, R>
+
+11.         Validate resource types R
+
+12.         if R is invalid then
+13.             Reject transaction
+14.             Error: resourcenotset()
+
+15.         Add Provider ID i to provider list
+
+16.         Emit ProviderRegistered event
+
+17.     else
+18.         Reject transaction
+19.         Error: WalletAlreadyRegistered(w)
+
+20. else
+21.     Reject transaction
+22.     Error: "Registration closed / Invalid wallet / Incorrect fee"
